@@ -1,0 +1,30 @@
+doctype html
+html(lang="fr")
+	head
+		meta(charset="utf-8")
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+	body
+
+	div#ajouterDossier
+		a(href='/pros/ajouter/89') Formulaire de création d'un professionnel
+
+	table(id='listePros' class='table table-responsive')
+		thead
+			th
+			th Spécialité
+			th Nom
+			th Prénom
+		tbody
+		each pro in pros
+			tr
+			td
+				a(href='/pros/consulter/#{pro._id}') Consulter dossier
+			td #{pro.specialite}
+			td #{pro.nom}
+			td #{pro.prenom}
+
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/bootstrap/js/bootstrap.min.js')
+	script(src='/js/ajax.js')

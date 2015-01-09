@@ -1,0 +1,34 @@
+doctype html
+html(lang="fr")
+	head
+		meta(charset="utf-8")
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+	body
+
+	div#suppression
+		a(href='') Supprimer ce professionnel
+div#message
+	div#content
+		form
+			| sexe :
+			input(id='sexe',type='text', name='sexe')
+			br
+			| nom :
+			input(id='nom',type='text', name='nom')
+			br
+			| prenom :
+			input(id='prenom',type='text', name='prenom')
+			br
+			| specialite :
+			input(id='specialite',type='text', name='specialite')
+			br
+			input(type='button',value='Modifier',onclick="modifier()")
+
+	div(id='leId' class='hide')
+		#{id}
+
+	script(src='/js/ajax.js')
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/bootstrap/js/bootstrap.min.js')

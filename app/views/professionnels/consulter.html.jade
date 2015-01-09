@@ -1,0 +1,20 @@
+doctype html
+html(lang="fr")
+	head
+		meta(charset="utf-8")
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
+	body(onload="loadPro()")
+
+	div#modification
+		a(href='/pros/modifier/#{id}') Modifier ce professionnel
+
+	div#content
+
+	div(id='leId' class='hide')
+		#{id}
+
+	script(src='/js/ajax.js')
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/bootstrap/js/bootstrap.min.js')
